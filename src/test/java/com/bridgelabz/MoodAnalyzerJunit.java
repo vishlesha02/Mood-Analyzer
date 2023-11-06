@@ -17,4 +17,21 @@ public class MoodAnalyzerJunit {
     {
         Assertions.assertEquals("happy",obj.analyzeMood("I am in happy mood"));
     }
+
+    @Test
+    public void analyze_Given_Message_And_RespondMood_Sad_from_Constructor()
+    {
+        MoodAnalyzer obj=new MoodAnalyzer("I am in sad mood");
+        Assertions.assertEquals("sad",obj.analyzeMoodRefactor());
+
+    }
+
+    @Test
+    public void analyze_Given_Message_And_RespondMood_happy_from_Constructor()
+    {
+        MoodAnalyzer obj=new MoodAnalyzer("I am in happy mood");
+        Assertions.assertEquals("happy",obj.analyzeMoodRefactor());
+
+    }
+
 }
