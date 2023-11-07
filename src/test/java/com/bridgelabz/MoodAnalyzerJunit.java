@@ -34,4 +34,12 @@ public class MoodAnalyzerJunit {
 
     }
 
+    @Test
+    public void analyze_Given_Message_And_RespondMood_happy_for_InvalidMood()
+    {
+
+        MoodAnalyzer obj=new MoodAnalyzer(null);
+        Assertions.assertEquals("happy",obj.analyzeMoodHandlingException());
+    }
+
 }
